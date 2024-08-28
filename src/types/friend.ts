@@ -1,13 +1,16 @@
-export interface Friend {
+export interface User {
   id: number;
   img: string;
   first_name: string;
   last_name: string;
-  status: string;
   available: boolean;
 }
 
-export interface FriendDetail extends Friend{
+export interface Friend extends User {
+  status: string;
+}
+
+export interface FriendDetail extends User {
   phone: string;
   address_1: string;
   city: string;

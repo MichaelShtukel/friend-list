@@ -1,13 +1,16 @@
+import { Container } from '@chakra-ui/react';
 import { Routes, Route } from 'react-router-dom';
-import FriendList from './components/FriendList';
-import FriendDetail from './components/FriendDetail';
+import FriendListPage from './pages/FriendListPage';
+import FriendDetailPage from './pages/FriendDetailPage';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<FriendList />} />
-      <Route path="/friends/:id" element={<FriendDetail />} />
-    </Routes>
+    <Container py="10">
+      <Routes>
+        <Route path="/" element={<FriendListPage />} />
+        <Route path="/friends/:id" element={<FriendDetailPage />} />
+      </Routes>
+    </Container>
   );
 }
 
