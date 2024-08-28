@@ -13,6 +13,7 @@ const FriendListPage = () => {
 
   return (
     <VStack spacing={4}>
+      <Text fontSize="xxx-large" color="gray.500">Friends</Text>
       {friends.map((friend) => (
         <FriendListItem key={friend.id} friend={friend}>
           <Button colorScheme="blue" onClick={() => navigate(`/friends/${friend.id}`)}>Details</Button>
