@@ -9,7 +9,7 @@ interface OnlineAvatarProps {
 
 const OnlineAvatar: FC<OnlineAvatarProps> = ({img, available, size = "md"}) => {
   return (
-    <Avatar src={img} mr={4} size={size} borderRadius="0.1em">
+    <Avatar src={img} mr={4} size={size} borderRadius="10">
       {available && <AvatarBadge boxSize='1em' bg='green.500' borderWidth="0.1em" />}
     </Avatar>
   );

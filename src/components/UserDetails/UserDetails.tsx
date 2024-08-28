@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { Badge, Stack, Text } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
+import StatusBadge from '../StatusBadge/StatusBadge';
 
 interface UserDetailsProps {
   first_name: string;
@@ -20,13 +21,13 @@ const UserDetails: FC<UserDetailsProps> = ({
     <>
       <Text fontSize={fontSize} fontWeight="bold">{first_name} {last_name}</Text>
       {
-        !!status && <Badge variant='outline'>{status}</Badge>
+        !!status && <StatusBadge status={status} />
       }
       {
         !!statuses?.length && (
           <Stack direction='row' wrap="wrap">
             {
-              statuses.map(status => <Badge key={status} variant='outline'>{status}</Badge>)
+              statuses.map(status => <StatusBadge key={status} status={status} />)
             }
           </Stack>
         )

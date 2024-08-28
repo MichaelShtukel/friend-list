@@ -1,6 +1,6 @@
+import { FC } from 'react';
 import { Box, HStack, Text } from '@chakra-ui/react';
 import { FriendDetail } from '../../types/friend';
-import { FC } from 'react';
 
 interface InfoCardProps {
   friendDetail: FriendDetail
